@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     const { messages } = await req.json();
     console.log("messages", messages);
     const response = Hf.textGenerationStream({
-      model: "mistralai/Mistral-7B-Instruct-v0.3",
+      model: "mistralai/Mistral-7B-Instruct-v0.3 ",
       inputs: experimental_buildOpenAssistantPrompt(messages),
       parameters: {
         max_new_tokens: 200,
